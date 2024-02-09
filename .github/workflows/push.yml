@@ -20,6 +20,8 @@ jobs:
          dockerfile: Dockerfile
   push: 
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     steps:
       - uses: actions/checkout@v4
       - name: Build image
