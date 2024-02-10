@@ -2,8 +2,8 @@ name: Build resume-server docker image and push to container registry
 
 on:
   push:
-    branches:
-      - 'release/**'
+    tags:
+      - v*
 
 env:
   IMAGE_NAME: resume_server
