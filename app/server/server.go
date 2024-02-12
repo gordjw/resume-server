@@ -12,6 +12,8 @@ func NewServer(port int) {
 	apiRouter := chi.NewRouter()
 	apiRouter.Get("/toys", getToys)
 	apiRouter.Get("/toys/{id}", getToy)
+	apiRouter.Get("/roles", getRoles)
+	apiRouter.Get("/roles/{id}", getRole)
 
 	r := chi.NewRouter()
 	r.Use(middlewareCors)

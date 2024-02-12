@@ -18,7 +18,7 @@ func getToys(w http.ResponseWriter, r *http.Request) {
 
 	bytes, err := json.Marshal(toys)
 	if err != nil {
-		fmt.Printf("Error marshalling toy: %v", err)
+		fmt.Printf("Error marshalling toys: %v", err)
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
